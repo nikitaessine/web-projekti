@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Library</title>
+    <meta charset="utf-8" />
+    <style>
+        body{
+            background-color: #d7f5c7;
+        }
+        a:link, a:visited {
+            box-shadow:inset 0px 39px 0px -24px #e67a73;
+            background-color:#e4685d;
+            border-radius:4px;
+            border:1px solid #ffffff;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:15px;
+            padding:6px 15px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #b23e35;
+        }
+        a:hover, a:active {
+            background-color: #f5726c;
+        }
+        .myButton {
+            box-shadow:inset 0px 39px 0px -24px #e67a73;
+            background-color:#e4685d;
+            border-radius:4px;
+            border:1px solid #ffffff;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family: Arial, serif;
+            font-size:15px;
+            padding:6px 15px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #b23e35;
+        }
+        .myButton:hover:active {
+            background-color:#f5726c;
+            position:relative;
+            top:1px;
+        }
+        table.center {
+            margin-left:auto;
+            margin-right:auto;
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<div align="center">
+<h1>Virtual Library</h1>
+    <p>Here you may add, edit and delete books in database</p>
+<p><a href="/create">Add book</a></p><br><br>
+<table class="center">
+    <tr><th>Author</th><th>Book title</th><th></th></tr>
+    {{#each users}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.title}}</td>
+            <td>
+                <a href="/edit/{{this.id}}">Edit</a>|
+                <form action="delete/{{this.id}}" method="POST" style="display:inline;">
+                    <input class="myButton" type="submit" value="Delete" />
+                </form>
+            </td>
+        </tr>
+    {{/each}}
+</table>
+</div>
+</body>
+<html>
