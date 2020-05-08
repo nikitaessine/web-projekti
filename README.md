@@ -1,14 +1,18 @@
 # Virtual Library
-This project represents 
+This project represents virtual library, where one may insert, edit, delete, print out list of books. MySql database is used to store data.
 
-SQL KYSELYT:
+# Getting started
+This projects is part of student work for Web-development course. 
 
-"SELECT * FROM users"
+# Prerequisites
+Node.js and MySql2. 
 
-"INSERT INTO users (name, title) VALUES (?,?)"
+# Deployment 
+Since it is a studen project, no deployment instructions provided.
 
-"SELECT * FROM users WHERE id=?"
+# Built with
+Webstorm IDE, Node.js
 
-"UPDATE users SET name=?, title=? WHERE id=?"
+# Author
+* **Nikita Essine** - *Student work* 
 
-"DELETE FROM users WHERE id=?"
