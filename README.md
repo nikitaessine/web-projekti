@@ -1,5 +1,5 @@
-# web-projekti
-Virtual Library
+# Virtual Library
+This project represents 
 
 SQL KYSELYT:
 
